@@ -1,0 +1,316 @@
+.vehicle-details-page {
+    padding-bottom: 4rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.main-image {
+    height: 500px;
+    margin-bottom: 1.5rem;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.thumb {
+    height: 100px;
+    cursor: pointer;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vehicle-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stars { color: #fbbf24; }
+.review-count { color: var(--text-muted); font-size: 0.9rem; }
+
+.description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.spec-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+}
+
+.spec-value {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.features-list h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.feature-item .check {
+    color: var(--success);
+    font-weight: 800;
+}
+
+.booking-sticky {
+    margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-header {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge-green { background: rgba(34, 197, 94, 0.1); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.2); }
+.badge-red { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); }
+
+.avg-val {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fbbf24;
+}
+
+.price-tag {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-item .amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.price-item .per {
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+.price-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin-top: 4rem;
+    padding: 3rem;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.reviews-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.reviews-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+}
+
+.big-rating {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fbbf24;
+}
+
+.stats-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-item {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.review-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.review-rating {
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+.review-comment {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.review-photo {
+    margin-top: 0.5rem;
+}
+
+.review-photo img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.reviews-list-container {
+    max-height: 800px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.reviews-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.reviews-list-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.reviews-list-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.no-reviews {
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-dim);
+}
+
+@media (max-width: 1024px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-section {
+        padding: 1.5rem;
+    }
+    .booking-sticky {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    .price-tag {
+        justify-content: center;
+    }
+}

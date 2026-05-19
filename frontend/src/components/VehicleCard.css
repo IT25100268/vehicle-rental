@@ -1,0 +1,273 @@
+.vehicle-card {
+  background: var(--liquid-bg);
+  backdrop-filter: var(--liquid-blur);
+  -webkit-backdrop-filter: var(--liquid-blur);
+  border: var(--liquid-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.vehicle-card:hover .vehicle-image {
+  transform: scale(1.1);
+}
+
+.vehicle-card.booked {
+  opacity: 0.82;
+}
+
+.vehicle-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vehicle-image-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(10,15,30,0.7), transparent);
+  pointer-events: none;
+}
+
+.vehicle-status-badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  color: white;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+.vehicle-status-badge.booked {
+  background: rgba(239,68,68,0.9);
+}
+
+.vehicle-status-badge.available {
+  background: rgba(16,185,129,0.9);
+}
+
+.vehicle-type-badge {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+  letter-spacing: 0.04em;
+}
+
+.vehicle-rating-badge {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 0.7rem;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.vehicle-rating-star {
+  color: #60a5fa;
+}
+
+.vehicle-info-container {
+  padding: 1rem 1.1rem 1.15rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.vehicle-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.vehicle-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+}
+
+.vehicle-subtitle {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+.vehicle-price-container {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.vehicle-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.vehicle-price-unit {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.vehicle-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.vehicle-details-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--liquid-border);
+  color: var(--text);
+  padding: 0.6rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vehicle-details-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.vehicle-rent-btn {
+  padding: 0.6rem;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 0.82rem;
+  border: none;
+}
+
+.vehicle-rent-btn.available {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: var(--shadow-blue);
+}
+
+.vehicle-rent-btn.booked {
+  background: rgba(148,163,184,0.12);
+  color: rgba(255,255,255,0.4);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.vehicle-card.dimmed {
+  filter: grayscale(0.5) contrast(0.9);
+  opacity: 0.9;
+}
+
+.vehicle-status-badge.status-booked {
+  background: rgba(239, 68, 68, 0.9);
+}
+
+.vehicle-status-badge.status-maintenance {
+  background: rgba(245, 158, 11, 0.9);
+}
+
+.vehicle-status-badge.status-unavailable {
+  background: rgba(107, 114, 128, 0.9);
+}
+
+.vehicle-status-badge.status-available {
+  background: rgba(16, 185, 129, 0.9);
+}
+
+.maintenance-date-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  z-index: 2;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.maintenance-reason-snippet {
+  font-size: 0.75rem;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.05);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border-left: 2px solid #fbbf24;
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+.vehicle-rent-btn.disabled-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-dim);
+  cursor: not-allowed;
+}
+
+.vehicle-type-badge-Car {
+  background: rgba(99, 102, 241, 0.13);
+  border: 1px solid rgba(99, 102, 241, 0.33);
+  color: #6366f1;
+}
+.vehicle-type-badge-Bike {
+  background: rgba(59, 130, 246, 0.13);
+  border: 1px solid rgba(59, 130, 246, 0.33);
+  color: #3b82f6;
+}
+.vehicle-type-badge-Van {
+  background: rgba(168, 85, 247, 0.13);
+  border: 1px solid rgba(168, 85, 247, 0.33);
+  color: #a855f7;
+}
+.vehicle-type-badge-ThreeWheeler {
+  background: rgba(16, 185, 129, 0.13);
+  border: 1px solid rgba(16, 185, 129, 0.33);
+  color: #10b981;
+}
