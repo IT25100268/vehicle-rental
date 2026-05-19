@@ -1,0 +1,77 @@
+# Global ignores
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+
+# Node.js / Frontend
+node_modules/
+dist/
+build/
+.env
+.env.*
+.vite/
+coverage/
+
+# Java / Maven / IntelliJ
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+.idea/
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+/target/
+/.classpath
+/.project
+/.settings/
+
+# VS Code
+.vscode/
+
+# OS generated files
+Icon?
+._*
+
+# Test/Results
+/test-results/
+/tests/*.log
+
+# Misc
+scratch/
+
+# Ignore data files (if not tracked)
+backend/data/*.txt
+!backend/data/.gitkeep
+
+# Ignore frontend test outputs
+frontend/test-results/
+
+# Ignore backend generated sources
+backend/target/generated-sources/
+
+# Ignore backend maven status
+backend/target/maven-status/
+
+# Documentation
+docs/
+*.md
+*.puml
+*.drawio
+*.pdf
+*.doc
+*.docx
+*.odt
