@@ -1,0 +1,88 @@
+.activity-page {
+    padding-bottom: 5rem;
+}
+
+.activity-header {
+    margin-bottom: 3rem;
+}
+
+.logs-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.log-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s ease;
+}
+
+.log-item:last-child {
+    border-bottom: none;
+}
+
+.log-item:hover {
+    background: var(--glass-light);
+}
+
+.log-icon {
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+}
+
+.log-main {
+    flex: 1;
+}
+
+.log-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.log-event h4 {
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.log-time {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+.log-details {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.security-actions {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(0,0,0,0)) !important;
+}
+
+.action-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.action-text p {
+    color: var(--text-muted);
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .security-actions {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,140 @@
+.reviews-page {
+    padding-bottom: 5rem;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.overall-rating {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    padding: 3rem;
+    gap: 3rem;
+    align-items: center;
+}
+
+.rating-score h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.rating-score .stars {
+    font-size: 1.5rem;
+    color: #fbbf24;
+}
+
+.rating-score p {
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+}
+
+.rating-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.bar {
+    flex: 1;
+    height: 8px;
+    background: var(--surface-2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: var(--primary);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.review-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.user-meta h4 {
+    font-size: 1rem;
+}
+
+.user-meta span {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.rev-stars {
+    margin-left: auto;
+    color: #fbbf24;
+}
+
+.review-comment {
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.review-footer {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+.rented-label { color: var(--text-dim); }
+.rented-vehicle { font-weight: 700; color: var(--primary); }
+
+.write-review {
+    text-align: center;
+    padding: 4rem;
+}
+
+.write-review h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+.write-review p { color: var(--text-muted); margin-bottom: 2rem; }
+
+@media (max-width: 768px) {
+    .overall-rating {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
