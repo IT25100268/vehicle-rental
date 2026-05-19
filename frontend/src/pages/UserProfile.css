@@ -1,0 +1,328 @@
+.user-profile-container {
+  padding: 3rem 1rem;
+}
+
+.user-profile-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.user-profile-header {
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.user-profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  font-size: 2rem;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.user-profile-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem;
+}
+
+.user-profile-email {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.user-profile-role-badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.25rem 0.85rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.user-profile-role-admin {
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.user-profile-role-member {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.user-profile-reviews-shortcut {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-profile-reviews-shortcut:hover {
+  background: rgba(251, 191, 36, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+}
+
+.user-profile-tabs {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.user-profile-tab-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.user-profile-tab-active {
+  background: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+}
+
+.user-profile-tab-inactive {
+  background: none;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.user-profile-section {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.user-profile-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.user-profile-section-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.user-profile-edit-btn {
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.user-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.user-profile-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.user-profile-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.user-profile-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.user-profile-input-normal {
+  border: 1px solid var(--border);
+}
+
+.user-profile-input-error {
+  border: 1px solid #ff4444;
+}
+
+.user-profile-error-msg {
+  font-size: 0.75rem;
+  color: #ff7070;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.user-profile-form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-profile-save-btn {
+  flex: 2;
+  padding: 0.85rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.user-profile-cancel-btn {
+  flex: 1;
+  padding: 0.85rem;
+  background: none;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.user-profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-profile-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.user-profile-info-icon {
+  font-size: 1.1rem;
+}
+
+.user-profile-info-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.user-profile-info-value {
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+
+.user-profile-pwd-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.user-profile-pwd-rules {
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.user-profile-pwd-rules-title {
+  color: var(--primary);
+}
+
+.user-profile-pwd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.user-profile-strength-container {
+  margin-top: 0.5rem;
+}
+
+.user-profile-strength-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.user-profile-strength-bar-bg {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  height: 4px;
+}
+
+.user-profile-strength-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.user-profile-pwd-success {
+  font-size: 0.75rem;
+  color: #22c55e;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.user-profile-change-pwd-btn {
+  padding: 1rem;
+  margin-top: 0.25rem;
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+  transition: background 0.2s;
+}
+
+.user-profile-change-pwd-btn-loading {
+  background: #374151;
+  cursor: not-allowed;
+}
+
+.user-profile-change-pwd-btn-normal {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  cursor: pointer;
+}
