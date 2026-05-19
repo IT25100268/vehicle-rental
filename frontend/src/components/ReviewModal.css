@@ -1,0 +1,203 @@
+/* ── Overlay: sits on top of everything ── */
+.review-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);   /* Standard dark backdrop as requested */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* ── Modal card ── */
+.review-modal-content {
+  width: 90%;                       /* Responsive width for smaller screens */
+  max-width: 520px;                 /* Limit width on desktop */
+  padding: 2.5rem;
+  position: relative;
+  z-index: 100001;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  background: rgba(15, 15, 30, 0.98); /* Solid enough to be visible over any background */
+  overflow: visible;
+}
+
+/* ── Close × button ── */
+.review-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.review-modal-close:hover {
+  color: white;
+}
+
+/* ── Title & subtitle ── */
+.review-modal-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.review-modal-subtitle {
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+}
+
+/* ── Star rating row ── */
+.rating-stars-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  flex-wrap: wrap;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.star-btn.active {
+  color: #fbbf24;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.45);
+}
+
+.star-btn:hover {
+  transform: scale(1.25);
+}
+
+.rating-text {
+  margin-left: 12px;
+  font-weight: 600;
+  color: #fbbf24;
+  font-size: 0.95rem;
+}
+
+/* ── Form fields ── */
+.review-form .form-group {
+  margin-bottom: 18px;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.review-form textarea,
+.review-form input[type="url"] {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  transition: border-color 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+.review-form textarea::placeholder,
+.review-form input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.review-form textarea:focus,
+.review-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Footer buttons ── */
+.review-modal-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.review-modal-footer button {
+  flex: 1;
+  padding: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-modal-footer .btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.review-modal-footer .btn-secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.review-modal-footer .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border: none;
+  color: white;
+}
+
+.review-modal-footer .btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.review-modal-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .review-modal-content {
+    padding: 24px 18px;
+  }
+
+  .star-btn {
+    font-size: 2rem;
+  }
+
+  .review-modal-footer {
+    flex-direction: column;
+  }
+}

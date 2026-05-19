@@ -1,0 +1,85 @@
+.safety-page {
+    padding-bottom: 5rem;
+}
+
+.safety-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.safety-card {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.safety-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.safety-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.safety-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.emergency-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(0, 0, 0, 0)) !important;
+    border-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+.emergency-info h3 {
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.emergency-numbers {
+    display: flex;
+    gap: 3rem;
+}
+
+.num-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.num-item .label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.num-item .value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+@media (max-width: 1024px) {
+    .emergency-contact {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .emergency-numbers {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
